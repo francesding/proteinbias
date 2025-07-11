@@ -80,7 +80,7 @@ class MyModel(BaseModel):
 proteinbias run-benchmark \
     --model-file my_model.py \
     --model-class MyModel \
-    --output results.csv
+    --output results.csv \
     --summary summary.csv
 ```
 
@@ -100,7 +100,7 @@ The `results.csv` shows **Elo ratings for each species** and the standard error 
 
 The `summary.csv` shows aggregated bias metrics to compare models at a high level:
 
-| Model | Range | Std Dev | IQR | Eukaryota | Bacteria | Archaea | Mammalia |
+| model | range | std_dev | iqr | eukaryota_mean | bacteria_mean | archaea_mean | mammalia_mean |
 |-------|-------|---------|-----|-----------|----------|---------|----------|
 | Progen2_xlarge_ll | 2040.0 | 563.2 | 612.3 | 1562.9 | 1523.1 | 846.0 | 2148.2 |
 | MyModel | 345.8 | 62.3 | 89.2 | 1504.2 | 1478.1 | 1423.5 | 1512.7 |
